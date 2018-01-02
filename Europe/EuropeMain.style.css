@@ -1,16 +1,43 @@
 
 header, main {
 	font-family: 'Pacifico', cursive;
+
 }
 
-header{
-	width: cover;
-	text-align: center;
+
+.headforall {
+	display: flex;
+	justify-content: space-between;
+	background-color: #ffffdd;
+	font-family: 'Poppins', sans-serif;
+	position: fixed;
+	z-index: 99;
+	width: 100%;
+	height: auto;
+	top: 0;
+	left: 0;
 }
+
+.socialmedia a{
+	width: 100%;
+	height: auto;
+	margin-right: -70px;
+}
+
+.socialmedia img{
+	display: block;
+	width: 30%;
+	}
+
+.headtitle{
+	margin-top: 20px;
+}
+
 
 .navheader{
 	display: flex;
 	align-items: center;
+	top: 0;
 }
 
 
@@ -62,6 +89,7 @@ h1{
 	justify-content: space-around;
 	align-items: row;
 	flex-wrap: wrap;
+	margin-bottom: 60px;
 }
 
 .col-4{
@@ -111,21 +139,14 @@ p:hover{
 	justify-content: space-around;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+footer{
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	background-color: #f7f8f9;
+	width: 100%;
+	height: auto;
+	position: fixed;
+	bottom: 0;
+	left: 0;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
