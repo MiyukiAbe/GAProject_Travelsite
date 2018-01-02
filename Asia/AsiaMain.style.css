@@ -61,11 +61,12 @@ li a:hover{
 	color: red;
 }
 
+/**I did not put any background pictres, but somehow, Europe pictures shows up,,,,,**/
 .subheader {
-	background-image: url("../Europe/images/ArcoAugusta_Lisbon.jpg");
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/ArcoAugusta_Lisbon.jpg");
-	background-image: webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/ArcoAugusta_Lisbon.jpg");
-	background: moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/ArcoAugusta_Lisbon.jpg");
+	background-image: url("#");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("#");
+	background-image: webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("#");
+	background: moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("#");
 	background-repeat: no-repeat;
 	background-position: center bottom; 
 	background-size: cover;
