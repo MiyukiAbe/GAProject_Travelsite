@@ -24,10 +24,15 @@ header, main {
 	display: none;
 }
 
+.socialmedia {
+	display: flex;
+	align-items: row;
+}
+
 .socialmedia a{
 	width: 100%;
 	height: auto;
-	margin-right: -70px;
+
 }
 
 .socialmedia img{
@@ -41,6 +46,7 @@ header, main {
 
 
 .navheader{
+	margin-top: 20px;
 	display: flex;
 	align-items: center;
 	top: 0;
@@ -226,10 +232,10 @@ h1{
 }
 
 .subheader {
-	/*background-image: url("../Europe/images/Oilseeds_Germany.jpg");
+	background-image: url("../Europe/images/Oilseeds_Germany.jpg");
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
 	background-image: webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
-	background: moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");*/
+	background: moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
 	height: 500px;
 }
 
@@ -242,13 +248,13 @@ body {
 	font-size: 10px;
 }
 h1{
-	font-size: 3rem;
+	font-size: 2rem;
 }
 .subheader {
-	background-image: url("../Europe/images/Oilseeds_Germany.jpg");
+/*	background-image: url("../Europe/images/Oilseeds_Germany.jpg");
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
 	background-image: webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
-	background: moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
+	background: moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");*/
 	height: 300px;
 }
 

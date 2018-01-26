@@ -1,9 +1,11 @@
 
+body {
+	font-size: 15px;
+}
+
 header, main {
 	font-family: 'Pacifico', cursive;
-
 }
-
 
 .headforall {
 	display: flex;
@@ -18,6 +20,10 @@ header, main {
 	left: 0;
 }
 
+.dropdown {
+	display: none;
+}
+
 .socialmedia a{
 	width: 100%;
 	height: auto;
@@ -29,17 +35,17 @@ header, main {
 	width: 30%;
 	}
 
-.headtitle{
+/*.headtitle{
 	margin-top: 20px;
 }
-
+*/
 
 .navheader{
+	margin-top: 30px;
 	display: flex;
 	align-items: center;
-	top: 0;
+	
 }
-
 
 ul {
     list-style-type: none;
@@ -61,6 +67,11 @@ li a:hover{
 	color: red;
 }
 
+
+#map {
+	height: 400px;
+	width: 50%;
+}
 .subheader {
 	background-image: url("../Europe/images/ArcoAugusta_Lisbon.jpg");
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/ArcoAugusta_Lisbon.jpg");
@@ -78,7 +89,7 @@ li a:hover{
 }
 
 h1{
-	font-size: 100px;
+	font-size: 6rem;
 	color: white;
 	text-align: center;
 }
@@ -109,7 +120,7 @@ h1{
 }
 
 p {
-	font-size: 40px;
+	font-size: 2.5rem;
 	color: white;
 	padding: 10px;
 	background-color: rgba(0, 0, 0, 0.2);
@@ -119,7 +130,7 @@ p {
 }
 
 p span {
-	font-size: 20px;
+	font-size: 1.5rem;
 }
 
 p:hover{
@@ -150,154 +161,108 @@ footer{
 	left: 0;
 }
 
-@media only screen and (max-width: 600px) {
-.headforall {
-	display: flex;
-	justify-content: space-between;
-	background-color: #ffffdd;
-	font-family: 'Poppins', sans-serif;
-	position: fixed;
-	z-index: 99;
-	width: 100%;
-	height: auto;
-	top: 0;
-	left: 0;
-}
-
-.socialmedia a{
-	width: 100%;
-	height: auto;
-	margin-right: -70px;
-}
-
-.socialmedia img{
-	display: block;
-	width: 20%;
+@media (max-width: 860px) {
+	p{
+		font-size: 2rem;
 	}
 
-.headtitle{
-	margin-top: 20px;
+	p span {
+		font-size: 1rem;
+	}
+
+@media (max-width: 750px) {
+.entiresitehead, .headtitle, .navheader{
+	display: none;
 }
 
-
-.navheader{
-	display: flex;
-	align-items: center;
-	top: 0;
+.menuIcon {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 5px;
+}
+.dropbtn {
+ 	background-color: #ffffdd;
+    color: black;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
- }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
 
-li {
-	display: inline-block;
+.dropdown-content a {
+    color: black;
+    padding: 10px 10px 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #4EADF6;
+}
+.menuIcon:hover {
+    background-color: black;
+}
+
+h1{
+	font-size: 4rem;
+}
+
+.subheader {
+	background-image: url("../Europe/images/Oilseeds_Germany.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
+	background-image: webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
+	background: moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
+	height: 500px;
+}
+
+.col-4{
+	width: 48%;
+}
+
+@media (max-width: 460px) {
+body {
 	font-size: 10px;
 }
-
-li a {
-    display: block;
-    padding: 10px;
-    color: black;
-}
-
-li a:hover{
-	color: red;
-}
-
-.subheader {
-	background-image: url("../Europe/images/ArcoAugusta_Lisbon.jpg");
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/ArcoAugusta_Lisbon.jpg");
-	background-image: webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/ArcoAugusta_Lisbon.jpg");
-	background: moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/ArcoAugusta_Lisbon.jpg");
-	background-repeat: no-repeat;
-	background-position: center bottom; 
-	background-size: cover;
-	background-attachment: fixed;
-	max-width: 100%; 
-	height: 800px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 h1{
-	font-size: 100px;
-	color: white;
-	text-align: center;
+	font-size: 3rem;
+}
+.subheader {
+	background-image: url("../Europe/images/Oilseeds_Germany.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
+	background-image: webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
+	background: moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
+	height: 300px;
 }
 
-
-.CityList {
-	display: flex;
-	justify-content: space-around;
-	align-items: row;
-	flex-wrap: wrap;
-	margin-bottom: 60px;
-}
-
-.col-4{
-	width: 30%;
-	height: auto;
-	margin: 1%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.col-4 img{
-	max-width: 100%;
-	height: auto;
-	display: block;
-	position: relative;
-}
-
-p {
-	font-size: 40px;
-	color: white;
-	padding: 10px;
-	background-color: rgba(0, 0, 0, 0.2);
-	position: absolute;
-	text-align: center;
-	line-height: 90%;
+p{
+	font-size: 1.5rem;
 }
 
 p span {
-	font-size: 20px;
+	font-size: 0.8rem;
 }
-
-p:hover{
-	background-color: #000000;
-}
-
-
-.row-reverse{
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: flex-start;
-}
-
-.row{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-}
-
-footer{
-	text-align: center;
-	font-family: 'Poppins', sans-serif;
-	background-color: #f7f8f9;
-	width: 100%;
-	height: auto;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-}
-
-
-
 
 }
