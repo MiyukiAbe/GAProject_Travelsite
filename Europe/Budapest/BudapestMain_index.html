@@ -8,6 +8,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> -->
 	<link href="https://fonts.googleapis.com/css?family=Pacifico|Poppins" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 	<link rel="stylesheet" href="../Budapest/BudapestMain.style.css" >
 </head>
 
@@ -72,79 +73,154 @@
 
 </header>
 <main>
+
+
 <h3>Budapest Sight Seeing Location</h3>
     <div id="map">
 	<!-- <iframe src="https://snazzymaps.com/embed/42491" width="100%" height="600px" style="border:none;"></iframe> -->
 </div>
 <script>
+	function initMap(){
+		var options = {
+			zoom:13,
+			center:{lat: 47.501510, lng:19.045905}
+		}
+		var map = new google.maps.Map(document.getElementById('map'), options);
+		var markers = [
+			{
+			coords:{lat: 47.501356,lng: 19.054162},
+			content:"<span class='location1'>St.Stephen's Basilica</span>",
+			},
+			{
+			coords:{lat: 47.507205,lng: 19.046309},
+			content:"<span class='location2'>Hungarian Parliament Building</span>",
+			},
+			{
+			coords:{lat: 47.502722,lng: 19.035578},
+			content:"<span class='location3'>Fisherman's Bastion</span>",
+			},
+			{
+			coords:{lat: 47.496699,lng: 19.041043},
+			content:"<span class='location4'>Buda Castle</span>",
+			},
+			{
+			coords:{lat: 47.486681,lng: 19.048325},
+			content:"<span class='location4'>Liberty Statue</span>",
+			},
 
-function initMap() {
-	
-	var Basilica = {
-		info: "<strong>St.Stephen's Basilica</strong>",
-		lat: 47.501356,
-		long: 19.054162
-	};
+		];
 
-	var Parliament = {
-		info: "<strong>Hungarian Parliament Building</strong>",
-		lat: 47.507205,
-		long: 19.046309
-	};
+			for (var i = 0; i < markers.length; i++) {
+				addMarker(markers[i]);
+		}
 
-	var Bastion = {
-		info: "<strong>Fisherman's Bastion</strong>",
-		lat: 47.502722,
-		long: 19.035578
-	};
-
-	var Castle = {
-		info: "<strong>Buda Castle</strong>",
-		lat: 47.496699, 
-		long: 19.041043
-	};
-
-	var Liberty = {
-		info: "<strong>Liberty Statue</strong>",
-		lat: 47.486681, 
-		long: 19.048325
-	};
-
-	var locations = [
-      [Basilica.info, Basilica.lat, Basilica.long, 0],
-      [Parliament.info, Parliament.lat, Parliament.long, 1],
-      [Bastion.info, Bastion.lat, Bastion.long, 2],
-      [Castle.info, Castle.lat, Castle.long, 3],
-      [Liberty.info, Liberty.lat, Liberty.long, 4],
-    ];
-
-	var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 13,
-		center: new google.maps.LatLng(47.501510, 19.045905),
-		mapTypeId: google.maps.MapTypeId.ROADMAP
-	});
-
-	var infowindow = new google.maps.InfoWindow({});
-
-	var marker, i;
-
-	for (i = 0; i < locations.length; i++) {
-		marker = new google.maps.Marker({
-			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+		//add marker fnction
+		function addMarker(props){
+			var marker = new google.maps.Marker({
+			position:props.coords,
 			map: map
 		});
+			if(props.content){
+				var infoWindow = new google.maps.InfoWindow({
+				content:props.content
+		});
 
-		google.maps.event.addListener(marker, 'click', (function (marker, i) {
-			return function () {
-				infowindow.setContent(locations[i][0]);
-				infowindow.open(map, marker);
+		marker.addListener('click', function(){
+			infoWindow.open(map, marker);
+			map.setZoom(15);
+			map.setCenter(marker.getPosition());	
+		});
 			}
-		})(marker, i));
+		}
 	}
-}
+
+
+//below works fine. got info from goolge site
+// function initMap() {
+	
+// 	var location1 = {
+// 		info: "<strong>St.Stephen's Basilica</strong>",
+// 		lat: 47.501356,
+// 		long: 19.054162
+// 	};
+
+// 	var location2 = {
+// 		info: "<strong>Hungarian Parliament Building</strong>",
+// 		lat: 47.507205,
+// 		long: 19.046309
+// 	};
+
+// 	var Bastion = {
+// 		info: "<strong>Fisherman's Bastion</strong>",
+// 		lat: 47.502722,
+// 		long: 19.035578
+// 	};
+
+// 	var Castle = {
+// 		info: "<strong>Buda Castle</strong>",
+// 		lat: 47.496699, 
+// 		long: 19.041043
+// 	};
+
+// 	var Liberty = {
+// 		info: "<strong>Liberty Statue</strong>",
+// 		lat: 47.486681, 
+// 		long: 19.048325
+// 	};
+
+// 	var locations = [
+//       [location1.info, location1.lat, location1.long, 0],
+//       [location2.info, location2.lat, location2.long, 1],
+//       [Bastion.info, Bastion.lat, Bastion.long, 2],
+//       [Castle.info, Castle.lat, Castle.long, 3],
+//       [Liberty.info, Liberty.lat, Liberty.long, 4],
+//     ];
+
+// 	var map = new google.maps.Map(document.getElementById('map'), {
+// 		zoom: 13,
+// 		center: new google.maps.LatLng(47.501510, 19.045905),
+// 		mapTypeId: google.maps.MapTypeId.ROADMAP
+// 	});
+
+// 	var infowindow = new google.maps.InfoWindow({});
+
+// 	var marker, i;
+
+// 	for (i = 0; i < locations.length; i++) {
+// 		marker = new google.maps.Marker({
+// 			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+// 			map: map
+// 		});
+
+// 		google.maps.event.addListener(marker, 'click', (function (marker, i) {
+				
+// 				return function () {
+// 				map.setZoom(15);
+// 				map.setCenter(marker.getPosition());	
+// 				infowindow.setContent(locations[i][0]);
+// 				infowindow.open(map, marker);
+// 			}
+// 		})(marker, i));
+// 	}		
+// }
+
+
+/////////////////////////////////////////////////////////
+
+
+
+
+
 
     </script>
  
+<!-- Scroll Down Test -->
+<div class="first" >
+	<button type="button">Click Me!</button>
+	<img src="../Budapest/images/location1.jpg" alt="Basilica_Budapest"></div>
+<div class="second">
+	<img src="../Budapest/images/location2.jpg" alt="Parliament"></div>
+
 </main>
 
 <footer>

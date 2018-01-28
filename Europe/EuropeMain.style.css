@@ -32,7 +32,7 @@ header, main {
 .socialmedia a{
 	width: 100%;
 	height: auto;
-
+	margin-right: -70px;
 }
 
 .socialmedia img{
