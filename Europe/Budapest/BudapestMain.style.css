@@ -1,12 +1,3 @@
-/*
-Testing how map style works*/
-
-
-/*
-Testing how map style works*/
-
-
-
 body {
 	font-size: 15px;
 }
@@ -75,70 +66,7 @@ li a:hover{
 	color: red;
 }
 
-
-#map {
-	height: 600px;
-	width: 50%;
-}
-/*.subheader {
-	background-image: url("../Europe/images/ArcoAugusta_Lisbon.jpg");
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/ArcoAugusta_Lisbon.jpg");
-	background-image: webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/ArcoAugusta_Lisbon.jpg");
-	background: moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/ArcoAugusta_Lisbon.jpg");
-	background-repeat: no-repeat;
-	background-position: center bottom; 
-	background-size: cover;
-	background-attachment: fixed;
-	max-width: 100%; 
-	height: 800px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}*/
-
-h1{
-	font-size: 6rem;
-	color: white;
-	text-align: center;
-}
-
-.location1 {
-	color: red;
-	text-decoration: underline;
-}
-
-.location1:hover{
-	color: black;
-}
-
-/*
-.CityList {
-	display: flex;
-	justify-content: space-around;
-	align-items: row;
-	flex-wrap: wrap;
-	margin-bottom: 60px;
-}
-*/
-/*.col-4{
-	width: 30%;
-	height: auto;
-	margin: 1%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.col-4 img{
-	max-width: 100%;
-	height: auto;
-	display: block;
-	position: relative;
-}
-
-*/
-
-p {
+/*p {
 	font-size: 2.5rem;
 	color: white;
 	padding: 10px;
@@ -154,20 +82,109 @@ p span {
 
 p:hover{
 	background-color: #000000;
-}
+}*/
 
-
-.row-reverse{
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: flex-start;
-}
 
 .row{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 }
+
+.mapAndContents {
+	display: flex;
+	justify-content: space-around;
+	align-items: row;
+	flex-wrap: wrap;
+/*	margin-bottom: 60px;*/
+}
+#map {
+	width: 49%;
+	height: 600px;
+}
+
+#placeHolder {
+	width: 49%;
+	height: 600px;
+	background: #666;
+	color: white;
+	position: relative;
+}	
+
+#placeHolderContents {
+	z-index: 99;
+	position: absolute;
+    text-align: center;
+    margin-top: 40%;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+#placeHolder article figure img {
+	width: 100%;
+	height: 600px;
+	position: relative;
+	opacity: 0.8;
+}
+
+#showImage {
+	width: 49%;
+	height: auto;
+	display: none;
+	overflow: hidden;
+	background: #666;
+	color: white;
+}
+
+.show {
+	height: 600px;
+	display: none;
+	overflow: hidden;
+	position: relative;
+}
+
+article {
+	display: flex;
+	justify-content: center;
+	align-items: column;
+	flex-wrap: wrap;
+}
+
+figure {
+	margin: 0px;
+}
+
+figure img {
+	width: 100%;
+	height: 600px;
+	position: relative;
+/*	opacity: 0.7;*/
+}
+
+hgroup {
+
+	z-index: 99;
+	position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+
+}
+
+
+span {
+	color: red;
+	text-decoration: underline;
+}
+
+span:hover{
+	color: black;
+}
+
+/*scroll down test*/
+
 
 footer{
 	text-align: center;
@@ -180,19 +197,7 @@ footer{
 	left: 0;
 }
 
-/*scroll down test*/
-.first img {
-  width: 100%;
-  height: 1000px;
-  background: #ccc;
-}
 
-
-.second img {
-  width: 100%;
-  height: 1000px;
-  background: #999;
-}
 
 @media (max-width: 860px) {
 	p{
@@ -259,36 +264,9 @@ footer{
     background-color: black;
 }
 
-h1{
-	font-size: 4rem;
-}
-
-.subheader {
-	background-image: url("../Europe/images/Oilseeds_Germany.jpg");
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
-	background-image: webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
-	background: moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
-	height: 500px;
-}
-
-.col-4{
-	width: 48%;
-}
 
 @media (max-width: 460px) {
-body {
-	font-size: 10px;
-}
-h1{
-	font-size: 3rem;
-}
-.subheader {
-	background-image: url("../Europe/images/Oilseeds_Germany.jpg");
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
-	background-image: webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
-	background: moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Europe/images/Oilseeds_Germany.jpg");
-	height: 300px;
-}
+
 
 p{
 	font-size: 1.5rem;

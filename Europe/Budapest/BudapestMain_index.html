@@ -54,7 +54,6 @@
 	</div>	
 	<div class="row">
 	<!-- 	<div class=headtitle><h3>????????????<br>Go Somewhere you have dreamed about</h3> -->
-		</div>
 		<div class="navheader">
 			<ul>
 				<li><a href="#">Budapest-Hungary</a></li>
@@ -74,62 +73,67 @@
 </header>
 <main>
 
+	<h3>Budapest Sight Seeing Location</h3>
+	<div class=mapAndContents>
+		<div id="map">
+				<!-- <iframe src="https://snazzymaps.com/embed/42491" width="100%" height="600px" style="border:none;"></iframe> -->
+		</div>
+<!--If I insert below script in js file, it does not work.-->
+		<script>
+			function initMap(){
+				var options = {
+					zoom:13,
+					center:{lat: 47.501510, lng:19.045905}
+				}
+				var map = new google.maps.Map(document.getElementById('map'), options);
+				var markers = [
+				{
+					coords:{lat: 47.501356,lng: 19.054162},
+					content:"<span class='location1'>St.Stephen's Basilica</span>",
+				},
+				{
+					coords:{lat: 47.507205,lng: 19.046309},
+					content:"<span class='location2'>Hungarian Parliament Building</span>",
+				},
+				{
+					coords:{lat: 47.502722,lng: 19.035578},
+					content:"<span class='location3'>Fisherman's Bastion</span>",
+				},
+				{
+					coords:{lat: 47.514972,lng:19.077777},
+					content:"<span class='location4'>Heroes' Square</span>",
+				},
+				{
+					coords:{lat: 47.499443,lng:19.044873},
+					content:"<span class='location5'>Széchenyi Chain Bridge</span>",
+				},
+				{
+					coords:{lat: 47.487173,lng:19.049493},
+					content:"<span class='location6'>Citadella</span>",
+				},	
 
-<h3>Budapest Sight Seeing Location</h3>
-    <div id="map">
-	<!-- <iframe src="https://snazzymaps.com/embed/42491" width="100%" height="600px" style="border:none;"></iframe> -->
-</div>
-<script>
-	function initMap(){
-		var options = {
-			zoom:13,
-			center:{lat: 47.501510, lng:19.045905}
-		}
-		var map = new google.maps.Map(document.getElementById('map'), options);
-		var markers = [
-			{
-			coords:{lat: 47.501356,lng: 19.054162},
-			content:"<span class='location1'>St.Stephen's Basilica</span>",
-			},
-			{
-			coords:{lat: 47.507205,lng: 19.046309},
-			content:"<span class='location2'>Hungarian Parliament Building</span>",
-			},
-			{
-			coords:{lat: 47.502722,lng: 19.035578},
-			content:"<span class='location3'>Fisherman's Bastion</span>",
-			},
-			{
-			coords:{lat: 47.496699,lng: 19.041043},
-			content:"<span class='location4'>Buda Castle</span>",
-			},
-			{
-			coords:{lat: 47.486681,lng: 19.048325},
-			content:"<span class='location4'>Liberty Statue</span>",
-			},
+				];
 
-		];
-
-			for (var i = 0; i < markers.length; i++) {
-				addMarker(markers[i]);
-		}
+				for (var i = 0; i < markers.length; i++) {
+					addMarker(markers[i]);
+				}
 
 		//add marker fnction
 		function addMarker(props){
 			var marker = new google.maps.Marker({
-			position:props.coords,
-			map: map
-		});
+				position:props.coords,
+				map: map
+			});
 			if(props.content){
 				var infoWindow = new google.maps.InfoWindow({
-				content:props.content
-		});
+					content:props.content
+				});
 
-		marker.addListener('click', function(){
-			infoWindow.open(map, marker);
-			map.setZoom(15);
-			map.setCenter(marker.getPosition());	
-		});
+				marker.addListener('click', function(){
+					infoWindow.open(map, marker);
+					// map.setZoom(15);
+					map.setCenter(marker.getPosition());	
+				});
 			}
 		}
 	}
@@ -193,7 +197,7 @@
 // 		});
 
 // 		google.maps.event.addListener(marker, 'click', (function (marker, i) {
-				
+
 // 				return function () {
 // 				map.setZoom(15);
 // 				map.setCenter(marker.getPosition());	
@@ -212,15 +216,96 @@
 
 
 
-    </script>
- 
+</script>
 <!-- Scroll Down Test -->
-<div class="first" >
-	<button type="button">Click Me!</button>
-	<img src="../Budapest/images/location1.jpg" alt="Basilica_Budapest"></div>
-<div class="second">
-	<img src="../Budapest/images/location2.jpg" alt="Parliament"></div>
+			<div id="placeHolder">
+				<article>
+						<figure>
+							<img src="../Budapest/images/placeHolder.jpg">
+						</figure>
+ 						<div id="placeHolderContents">
+								<h1>Budapest in Hungary</h1>
+						</div>
+				</article>
+				
+			</div>
+			<div id="showImage">
+				<section class="show location1">
+					<article>
+						<figure>
+							<img src="../Budapest/images/location1.jpg">
+						</figure>
+						<hgroup>
+								<h1>location 1</h1>
+								<h2>need to write someting</h2>
+						</hgroup>
+					</article>
+				</section>
+				<section class="show location2">
+					<article>
+						<figure>
+							<img src="../Budapest/images/location2.jpg">
+						</figure>
+							<hgroup>
+								<h1>location 2</h1>
+								<h2>need to write someting</h2>
+							</hgroup>
+					</article>
+				</section>
+				<section class="show location3">
+					<article>
+						<figure>
+							<img src="../Budapest/images/location3.jpg">
+						</figure>
+							<hgroup>
+								<h1>location 3</h1>
+								<h2>need to write someting</h2>
+							</hgroup>
+					</article>
+				</section>
+				<section class="show location4">
+					<article>
+						<figure>
+							<img src="../Budapest/images/location4.jpg">
+						</figure>
+							<hgroup>
+								<h1>location 4</h1>
+								<h2>need to write someting</h2>
+							</hgroup>
+					</article>
+				</section>
+				<section class="show location5">
+					<article>
+						<figure>
+							<img src="../Budapest/images/location5.jpg">
+						</figure>
+							<hgroup>
+								<h1>location 2</h1>
+								<h2>need to write someting</h2>
+							</hgroup>
+					</article>
+				</section>
+				<section class="show location6">
+					<article>
+						<figure>
+							<img src="../Budapest/images/location6.jpg">
+						</figure>
+							<hgroup>
+								<h1>location 2</h1>
+								<h2>need to write someting</h2>
+							</hgroup>
+					</article>
+				</section>
 
+
+
+
+
+
+
+			</div>
+
+	</div>
 </main>
 
 <footer>
