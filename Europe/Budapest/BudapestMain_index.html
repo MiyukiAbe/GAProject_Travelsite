@@ -3,7 +3,7 @@
 <head>
 	<title>AbeforeB My Destination Bucket List</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> -->
@@ -124,6 +124,7 @@
 				position:props.coords,
 				map: map
 			});
+
 			if(props.content){
 				var infoWindow = new google.maps.InfoWindow({
 					content:props.content
@@ -132,11 +133,13 @@
 				marker.addListener('click', function(){
 					infoWindow.open(map, marker);
 					// map.setZoom(15);
-					map.setCenter(marker.getPosition());	
-				});
+					map.setCenter(marker.getPosition());
+		
+					});
+				}
+
+				}
 			}
-		}
-	}
 
 
 //below works fine. got info from goolge site
@@ -233,7 +236,7 @@
 				<section class="show location1">
 					<article>
 						<figure>
-							<img src="../Budapest/images/location1.jpg">
+							<img src="../Budapest/images/location1.jpg" alt="St.Stephen's Basilica">
 						</figure>
 						<hgroup>
 								<h1>location 1</h1>
@@ -244,7 +247,7 @@
 				<section class="show location2">
 					<article>
 						<figure>
-							<img src="../Budapest/images/location2.jpg">
+							<img src="../Budapest/images/location2.jpg" alt="Hungarian Parliament Building">
 						</figure>
 							<hgroup>
 								<h1>location 2</h1>
@@ -255,7 +258,7 @@
 				<section class="show location3">
 					<article>
 						<figure>
-							<img src="../Budapest/images/location3.jpg">
+							<img src="../Budapest/images/location3.jpg" src="Fisherman's Bastion">
 						</figure>
 							<hgroup>
 								<h1>location 3</h1>
@@ -266,7 +269,7 @@
 				<section class="show location4">
 					<article>
 						<figure>
-							<img src="../Budapest/images/location4.jpg">
+							<img src="../Budapest/images/location4.jpg" src="Heroes' Square">
 						</figure>
 							<hgroup>
 								<h1>location 4</h1>
@@ -277,7 +280,7 @@
 				<section class="show location5">
 					<article>
 						<figure>
-							<img src="../Budapest/images/location5.jpg">
+							<img src="../Budapest/images/location5.jpg" src="Széchenyi Chain Bridge">
 						</figure>
 							<hgroup>
 								<h1>location 2</h1>
@@ -288,7 +291,7 @@
 				<section class="show location6">
 					<article>
 						<figure>
-							<img src="../Budapest/images/location6.jpg">
+							<img src="../Budapest/images/location6.jpg" src="Citadella">
 						</figure>
 							<hgroup>
 								<h1>location 2</h1>
@@ -296,17 +299,135 @@
 							</hgroup>
 					</article>
 				</section>
-
-
-
-
-
-
-
 			</div>
 
 	</div>
+
+
+
+<div class="photoLibrary">
+	<div class="pictureChange location1">
+		<img src="../Budapest/images/location1.jpg" alt="St.Stephen's Basilica">
+	</div>
+	<div class="pictureChange location2">
+		<img src="../Budapest/images/location2.jpg" alt="Hungarian Parliament Building">
+	</div>
+	<div class="pictureChange location3">
+		<img src="../Budapest/images/location3.jpg" src="Fisherman's Bastion">
+	</div>
+	<div class="pictureChange location4">
+		<img src="../Budapest/images/location4.jpg" src="Heroes' Square">
+	</div>
+	<div class="pictureChange location5">
+		<img src="../Budapest/images/location5.jpg" src="Széchenyi Chain Bridge">
+	</div>
+	<div class="pictureChange location6">
+		<img src="../Budapest/images/location6.jpg" src="Citadella">
+	</div>
+</div>
+	
+<!--Testing picture library-->
+<!-- <h2 style="text-align:center">Slideshow Gallery</h2>
+
+<div class="container">
+	<div class="mySlides">
+		<div class="numbertext">1 / 6</div>
+		<img src="../Budapest/images/location1.jpg" style="width:100%">
+	</div>
+
+	<div class="mySlides">
+		<div class="numbertext">2 / 6</div>
+		<img src="../Budapest/images/location2.jpg" style="width:100%">
+	</div>
+
+	<div class="mySlides">
+		<div class="numbertext">3 / 6</div>
+		<img src="../Budapest/images/location3.jpg" style="width:100%">
+	</div>
+
+	<div class="mySlides">
+		<div class="numbertext">4 / 6</div>
+		<img src="../Budapest/images/location4.jpg" style="width:100%">
+	</div>
+
+	<div class="mySlides">
+		<div class="numbertext">5 / 6</div>
+		<img src="../Budapest/images/location5.jpg" style="width:100%">
+	</div>
+
+	<div class="mySlides">
+		<div class="numbertext">6 / 6</div>
+		<img src="../Budapest/images/location6.jpg" style="width:100%">
+	</div>
+
+	<a class="prev" onclick="plusSlides(-1)">❮</a>
+	<a class="next" onclick="plusSlides(1)">❯</a>
+
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+
+	<div class="row">
+		<div class="column">
+			<img class="demo cursor" src="../Budapest/images/location1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+		</div>
+		<div class="column">
+			<img class="demo cursor" src="../Budapest/images/location2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Trolltunga, Norway">
+		</div>
+		<div class="column">
+			<img class="demo cursor" src="../Budapest/images/location3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+		</div>
+		<div class="column">
+			<img class="demo cursor" src="../Budapest/images/location4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+		</div>
+		<div class="column">
+			<img class="demo cursor" src="../Budapest/images/location5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+		</div>    
+		<div class="column">
+			<img class="demo cursor" src="../Budapest/images/location6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+		</div>
+	</div>
+</div>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+ -->
+
+
 </main>
+
+
+
 
 <footer>
 	<div class="navfooter">
@@ -317,6 +438,18 @@
 			<li><a href="#">Africa</a></li>
 		</ul>
 	</div>
+
+
+
+
+
+
+
+
+
+
+
+
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
