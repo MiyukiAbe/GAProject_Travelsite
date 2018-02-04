@@ -62,10 +62,10 @@ li a:hover{
 }
 
 .subheader {
-	background-image: url("../Asia/images/Meiji_Shrine.jpg");
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Asia/images/Meiji_Shrine.jpg");
-	background-image: webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Asia/images/Meiji_Shrine.jpg");
-	background: moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Asia/images/Meiji_Shrine.jpg");
+	background-image: url("../Main_Asia/images/Meiji_Shrine.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Main_Asia/images/Meiji_Shrine.jpg");
+	background-image: webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Main_Asia/images/Meiji_Shrine.jpg");
+	background: moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Main_Asia/images/Meiji_Shrine.jpg");
 	background-repeat: no-repeat;
 	background-position: center bottom; 
 	background-size: cover;

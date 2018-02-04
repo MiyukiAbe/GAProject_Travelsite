@@ -1,19 +1,17 @@
 body {
 	font-size: 15px;
-	background-color: rgba(219, 219, 219, 0.3) ;
+/*	background-color: rgba(219, 219, 219, 0.3) ;*/
+	font-family: 'Poppins', sans-serif;
 }
 
-header, main {
-	font-family: 'Pacifico', cursive;
-}
 
 .headforall {
 	display: flex;
 	justify-content: space-between;
 	background-color: #ffffdd;
-	font-family: 'Poppins', sans-serif;
+/*	font-family: 'Poppins', sans-serif;*/
 	position: fixed;
-	z-index: 99;
+	z-index: 100;
 	width: 100%;
 	height: auto;
 	top: 0;
@@ -44,7 +42,7 @@ header, main {
 	margin-top: 30px;
 	display: flex;
 	align-items: center;
-	
+	justify-content: space-around;
 }
 
 ul {
@@ -67,6 +65,11 @@ li a:hover{
 	color: red;
 }
 
+h1 {
+	font-size: 3rem;
+	font-family: 'Pacifico', cursive;
+}
+
 /*p {
 	font-size: 2.5rem;
 	color: white;
@@ -85,11 +88,15 @@ p:hover{
 	background-color: #000000;
 }*/
 
+.sightSeeing, .food{
+	margin-top: 10px;
+	border-top: 2px solid rgba(219, 219, 219, 0.7);
+}
 
 .row{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .mapAndContents {
@@ -97,7 +104,6 @@ p:hover{
 	justify-content: space-around;
 	align-items: row;
 	flex-wrap: wrap;
-/*	margin-bottom: 60px;*/
 }
 #map {
 	width: 49%;
@@ -119,9 +125,6 @@ p:hover{
     margin-top: 40%;
 }
 
-h1 {
-	font-size: 3rem;
-}
 
 #placeHolder article figure img {
 	width: 100%;
@@ -182,7 +185,6 @@ span:hover{
 	color: black;
 }
 
-/*/*phone library test*/
 
 .photoLibrary {
 	display: flex;
@@ -205,7 +207,35 @@ span:hover{
 .photoLibrary div img:hover {
 	opacity: 0.7;
 
-/*               */
+}
+
+/*Test for Slideshow*/
+
+.slideItem img{
+	width: 100%;
+	height: auto;
+}
+
+
+.slick-prev {
+    left: 100px;
+    z-index: 999;
+}
+
+.slick-next {
+    right: 100px;
+    z-index: 999;
+}
+
+#mySlider{
+	padding: 20px 100px 50px 100px;
+}
+
+/*h3 {
+	color: red;
+}*/
+
+/*Test for Slideshow*/
 footer{
 	text-align: center;
 	font-family: 'Poppins', sans-serif;
@@ -218,112 +248,8 @@ footer{
 }
 
 
-/*Test for Slideshow*/
-/*body {
-  font-family: Arial;
-  margin: 0;
-}
 
-* {
-  box-sizing: border-box;
-}
-
-img {
-  vertical-align: middle;
-}
-*/
-/* Position the image container (needed to position the left and right arrows) */
-/*.container {
-  position: relative;
-}*/
-
-/* Hide the images by default */
-/*.mySlides {
-  display: none;
-}*/
-
-/* Add a pointer when hovering over the thumbnail images */
-/*.cursor {
-  cursor: pointer;
-}*/
-
-/* Next & previous buttons */
-/*.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}*/
-
-/* Position the "next button" to the right */
-/*.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}*/
-
-/* On hover, add a black background color with a little bit see-through */
-/*.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-*/
-/* Number text (1/3 etc) */
-/*.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}*/
-
-/* Container for image text */
-/*.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-*/
-/* Six columns side by side */
-/*.column {
-  float: left;
-  width: 16.66%;
-}
-*/
-/* Add a transparency effect for thumnbail images */
-/*.demo {
-  opacity: 0.6;
-}
-*/
-/*.active,
-.demo:hover {
-  opacity: 1;
-}
-*/
-
-
-/*Test for Slideshow*/
-
-
-
-
-
-
+ 
 @media (max-width: 860px) {
 	p{
 		font-size: 2rem;
