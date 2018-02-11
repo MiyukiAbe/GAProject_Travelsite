@@ -1,9 +1,6 @@
 $(document).ready(function(){
 
 
-
-
-
 $("#map").on("click", "span", switchingPictures);
 $(".pictureChange").on("click", switchingPictures);
 
@@ -27,26 +24,14 @@ function switchingPictures() {
 };
 
 
-//mouseover and changing pictures is working. Would like to add discription.
-$(".slideItem").on("mouseover", showingDiscription);
-
-function showingDiscription() {
-	$("#placeHolder").css("display","none");
-	$("#showImage").show();
-	$(".show").css("display", "none");
-		if($(this).hasClass("food1") ){
-			$(".location1").show();
-	}	if($(this).hasClass("food2") ){
-			$(".location2").show();
-	}	if($(this).hasClass("location3") ){
-			$(".location3").show();
-	}
-
-};
-
 
 // slide pictures from slick slider
-  $('#mySlider').slick({
+  // $('#mySlider').slick({
+  // 	infinite: true,
+ 	// slidesToShow: 3,
+  // 	slidesToScroll: 3
+
+
 //If I have one pictures and would like to play auto use below
 	// autoplay: true
 //for 3 pictures sliding 
@@ -88,7 +73,45 @@ function showingDiscription() {
 // 
 
 
-  centerMode: true,
+  // centerMode: true,
+  // centerPadding: '60px',
+  // slidesToShow: 3,
+  // responsive: [
+  //   {
+  //     breakpoint: 768,
+  //     settings: {
+  //       arrows: false,
+  //       centerMode: true,
+  //       centerPadding: '40px',
+  //       slidesToShow: 3
+  //     }
+  //   },
+  //   {
+  //     breakpoint: 480,
+  //     settings: {
+  //       arrows: false,
+  //       centerMode: true,
+  //       centerPadding: '40px',
+  //       slidesToShow: 1
+  //     }
+  //   }
+  // ]
+
+  // });
+
+  //when user change windows size, reload the site.
+$(window).resize(function(){location.reload();});
+
+//changenumber of images depends on screensize
+screenClass();
+$(window).bind('resize',function(){
+    screenClass();
+});
+
+ function screenClass() {
+	if ($(window).width() > 600) {
+    	$('#mySlider').slick({
+    		  centerMode: true,
   centerPadding: '60px',
   slidesToShow: 3,
   responsive: [
@@ -111,14 +134,43 @@ function showingDiscription() {
       }
     }
   ]
+  });  	
+}
+
+
+  if ($(window).width() < 600) {
+		$('#mySlider').slick({
+		dots: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		adaptiveHeight: true
+	});
+};
+};
+
+// $(window).resize(function() {
+// 	if ($(window).width() < 560)  {
+// 	 	$('#mySlider').slick({
+//   		 infinite: true,
+//   		slidesToShow: 3,
+//   		slidesToScroll: 3
+//   		});
+// };
+// });
+
+
+ //  if ($(window).width() < 760)  {
+	//  $('#mySlider').slick({
+ //  		 infinite: true,
+ //  		slidesToShow: 3,
+ //  		slidesToScroll: 3
+ //  		});
+	// }
 
 
 
-  });
-
-
-
-
-
+	
+ 
 
   });
